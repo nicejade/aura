@@ -1,0 +1,23 @@
+.module-warpper {
+  @apply w-full mx-auto flex flex-col text-center items-start justify-center;
+}
+
+.module-space {
+  @apply desktop:pt-[160px] laptop:pt-[80px] pt-[40px] desktop:max-w-[1200px] laptop:px-[32px] tablet:px-[16px];
+}
+
+.large-title {
+  @apply desktop:text-[80px] laptop:text-[48px] tablet:text-[24px] text-black;
+}
+
+.blueos-logo {
+  @apply mb-[10px] desktop:w-[136px] laptop:w-[120px] tablet:w-[96px];
+}
+
+.general-desc {
+  @apply desktop:text-[20px] laptop:text-[20px] tablet:text-[14px]  font-normal text-silver desktop:leading-10 laptop:leading-8 tablet:leading-5;
+}
+
+.section-responsive {
+  @apply flex flex-col items-start desktop:justify-center justify-start desktop:border-none border border-silvergrey rounded-[20px] tablet:py-[20px] laptop:py-[40px] tablet:px-[15px] laptop:px-[30px] tablet:mb-[20px] laptop:mb-[40px];
+}
