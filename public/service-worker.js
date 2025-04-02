@@ -1,5 +1,5 @@
 const HTMLToCache = '/'
-const version = 'marshal-v1'
+const version = 'marshal-v2'
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

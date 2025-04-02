@@ -20,6 +20,9 @@
               <a href="https://x.com/MarshalXuan" target="_blank" rel="noopener noreferrer">
                 <img class="w-5 h-5 desktop:w-6 desktop:h-6" src="/svgs/x.svg" alt="X MarshalXuan">
               </a>
+              <a href="https://www.youtube.com/@MarshalXuan" target="_blank" rel="noopener noreferrer">
+                <img class="w-5 h-5 desktop:w-6 desktop:h-6" src="/svgs/youtube.svg" alt="YouTube">
+              </a>
               <a href="https://mastodon.social/@nicejade" target="_blank" rel="noopener noreferrer">
                 <img class="w-5 h-5 desktop:w-6 desktop:h-6" src="/svgs/mastodon.svg" alt="Mastodon nicejade">
               </a>
