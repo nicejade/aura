@@ -6,7 +6,7 @@
     <!-- <KeyTech /> -->
     <HorizontalScroll />
     <!-- <WatchFace /> -->
-    <!-- <Elevator /> -->
+    <Elevator />
     <Footer />
   </div>
 </template>
@@ -20,7 +20,7 @@ import ScrollZoom from './../components/ScrollZoom.vue'
 import HorizontalScroll from '../components/HorizontalScroll.vue'
 // import WatchFace from './../components/WatchFace.vue'
 import Footer from './../components/Footer.vue'
-// import Elevator from './../components/Elevator.vue'
+import Elevator from './../components/Elevator.vue'
 
 export default {
   name: 'Home',
@@ -37,7 +37,7 @@ export default {
     HorizontalScroll,
     // WatchFace,
     Footer,
-    // Elevator
+    Elevator
   },
 
   mounted() {
