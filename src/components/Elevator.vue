@@ -172,7 +172,7 @@ $zindex-elevator: 10000;
       content: '';
       position: absolute;
       left: 100%;
-      top: 12.5 * $factor;
+      top: 11.25 * $factor;
       width: 0;
       height: 0;
       border-top: $factor solid transparent;

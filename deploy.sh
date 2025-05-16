@@ -8,10 +8,10 @@ cd ./dist
 
 rm js/*.map
 
-echo 'thebettersites.com' > CNAME
+echo 'lovejade.cn' > CNAME
 
 git init
 git add -A
 git commit -m '🎉 local build for deploy'
 
-git push -f git@github.com:nicejade/thebettersites.com.git main:gh-pages
+git push -f git@github.com:nicejade/lovejade.cn.git main:gh-pages

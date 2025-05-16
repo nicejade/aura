@@ -61,10 +61,10 @@ export default {
 
 <style scoped lang="scss">
 .bg-img {
-  background-image: url('https://www.thebettersites.com/images/Banner/mobile.jpeg');
+  background-image: url('https://www.lovejade.cn/images/Banner/mobile.jpeg');
 
   @media screen and (min-width: 1440px) {
-    background-image: url('https://www.thebettersites.com/images/Banner/pc.jpeg');
+    background-image: url('https://www.lovejade.cn/images/Banner/pc.jpeg');
   }
 }
 

@@ -47,10 +47,6 @@ body {
 }
 
 .gradient-text {
-  color: black;
-}
-
-.gradient-text:hover {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(90deg, #f59e0b, #ff4582, #0ea5e9);
   background-clip: text;

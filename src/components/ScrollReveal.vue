@@ -185,19 +185,19 @@ export default {
 <style scoped lang="scss">
 .card1 {
   @media screen and (min-width: 1440px) {
-    background-image: url('https://www.thebettersites.com/images/ScrollReveal/card1.png');
+    background-image: url('https://www.lovejade.cn/images/ScrollReveal/card1.png');
   }
 }
 
 .card2 {
   @media screen and (min-width: 1440px) {
-    background-image: url('https://www.thebettersites.com/images/ScrollReveal/card2.png');
+    background-image: url('https://www.lovejade.cn/images/ScrollReveal/card2.png');
   }
 }
 
 .card3 {
   @media screen and (min-width: 1440px) {
-    background-image: url('https://www.thebettersites.com/images/ScrollReveal/card3.png');
+    background-image: url('https://www.lovejade.cn/images/ScrollReveal/card3.png');
   }
 }
 </style>

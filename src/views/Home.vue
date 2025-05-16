@@ -1,11 +1,10 @@
 <template>
   <div class="page-container">
     <Banner />
+    <Wechats />
     <ScrollReveal />
     <ScrollZoom />
-    <!-- <KeyTech /> -->
     <HorizontalScroll />
-    <!-- <WatchFace /> -->
     <Elevator />
     <Footer />
   </div>
@@ -16,9 +15,8 @@ import { debounce } from './../helper/utils'
 import Banner from './../components/Banner.vue'
 import ScrollReveal from '../components/ScrollReveal.vue'
 import ScrollZoom from './../components/ScrollZoom.vue'
-// import KeyTech from './../components/KeyTech.vue'
+import Wechats from '../components/Wechats.vue'
 import HorizontalScroll from '../components/HorizontalScroll.vue'
-// import WatchFace from './../components/WatchFace.vue'
 import Footer from './../components/Footer.vue'
 import Elevator from './../components/Elevator.vue'
 
@@ -33,9 +31,8 @@ export default {
     Banner,
     ScrollReveal,
     ScrollZoom,
-    // KeyTech,
+    Wechats,
     HorizontalScroll,
-    // WatchFace,
     Footer,
     Elevator
   },

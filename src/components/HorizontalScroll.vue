@@ -1,7 +1,8 @@
 <template>
   <section class="relative w-full bg-white" role="region" aria-label="博客列表">
-    <div class="module-warpper module-space">
-      <h2 class="font-medium large-title vivo-blod-font">个人博客</h2>
+    <div
+      class="flex flex-row w-full !items-center module-warpper tablet:mt-[20px] laptop:mt-[58px] desktop:mt-[160px] tablet:mb-[16px] laptop:mb-[34px] desktop:mb-[80px]">
+      <h2 class="font-medium large-title vivo-blod-font" id="open-source-works">个人博客</h2>
     </div>
 
     <div id="scroll-trigger" role="list"
