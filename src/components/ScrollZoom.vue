@@ -4,8 +4,8 @@
       <h3
         class="tablet:text-[20px] text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] mt-[24px] laptop:mt-[60px] desktop:mt-[0] text-[#1D1D1F]"
         id="wealth-tracker">
-        <a class="hover:text-blue gradient-text" href="https://site.lovejade.cn/" target="_blank"
-          rel="noopener noreferrer" aria-label="访问倾城之链应用">
+        <a class="gradient-text" href="https://site.lovejade.cn/" target="_blank" rel="noopener noreferrer"
+          aria-label="访问倾城之链应用">
           倾城之链
         </a>
       </h3>

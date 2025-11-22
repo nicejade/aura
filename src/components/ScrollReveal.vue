@@ -61,8 +61,8 @@
         <h3
           class="tablet:text-[20px] text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] mt-[24px] laptop:mt-[60px] desktop:mt-[0] text-[#1D1D1F]"
           id="wealth-tracker">
-          <a class="hover:text-blue gradient-text" href="https://fund.lovejade.cn/" target="_blank"
-            rel="noopener noreferrer" aria-label="访问生财有迹应用">生财有迹
+          <a class="gradient-text" href="https://fund.lovejade.cn/" target="_blank" rel="noopener noreferrer"
+            aria-label="访问生财有迹应用">生财有迹
           </a>
         </h3>
         <div
@@ -88,8 +88,8 @@
         <h3
           class="tablet:text-[20px] text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] mt-[24px] laptop:mt-[60px] desktop:mt-[0] text-[#1D1D1F] desktop:text-right"
           id="markdown2png">
-          <a class="hover:text-brand gradient-text" href="https://share.lovejade.cn/" target="_blank"
-            rel="noopener noreferrer" aria-label="访问玉桃文飨轩应用">玉桃文飨轩</a>
+          <a class="gradient-text" href="https://share.lovejade.cn/" target="_blank" rel="noopener noreferrer"
+            aria-label="访问玉桃文飨轩应用">玉桃文飨轩</a>
         </h3>
         <div
           class="tablet:text-[14px] text-[20px] tablet:leading-[24px] leading-[40px] text-[#86868B] desktop:text-[#666666] mb-[10px] desktop:mb-[0]">
@@ -105,8 +105,8 @@
         <h3
           class="tablet:text-[20px] text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] mt-[24px] laptop:mt-[60px] desktop:mt-[0] text-[#1D1D1F]"
           id="online-editor">
-          <a class="hover:text-blue gradient-text" href="https://markdown.lovejade.cn/" target="_blank"
-            rel="noopener noreferrer" aria-label="访问在线编辑器应用">在线编辑器</a>
+          <a class="gradient-text" href="https://markdown.lovejade.cn/" target="_blank" rel="noopener noreferrer"
+            aria-label="访问在线编辑器应用">在线编辑器</a>
         </h3>
         <div
           class="tablet:text-[14px] text-[20px] tablet:leading-[24px] leading-[40px] text-[#86868B] desktop:text-[#666666] mb-[10px] desktop:mb-[0]">

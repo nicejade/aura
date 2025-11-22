@@ -47,10 +47,36 @@ body {
 }
 
 .gradient-text {
+  display: inline-block;
+  transform-origin: center;
   -webkit-text-fill-color: transparent;
   background: linear-gradient(90deg, #f59e0b, #ff4582, #0ea5e9);
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.gradient-text:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
 }
 
 .icons {

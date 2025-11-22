@@ -55,7 +55,9 @@
               <h3
                 class="title desktop:text-[48px] laptop:text-[32px] tablet:text-[20px] font-bold desktop:mb-[60px] tablet:mb-[10px] laptop:mb-[20px] text-black"
                 itemprop="name">
-                {{ item.title }}
+                <a :href="item.externalLink" target="_blank" rel="noopener noreferrer" class="gradient-text"
+                  :aria-label="`在新标签中打开 ${item.title}`">{{ item.title
+                  }}</a>
               </h3>
               <div
                 class="w-full desktop:min-h-[60vh] flex desktop:flex-row flex-col justify-between desktop:space-x-[20px] desktop:bg-greywhile desktop:p-[50px] desktop:rounded-[40px]">
@@ -100,6 +102,16 @@ const BLOGS_LIST = [
     externalLink: 'https://www.jeffjade.com',
     createdDate: '2015-04-01',
     authorUrl: 'https://nicejade.bio.link/'
+  },
+  {
+    title: '缘知随心庭',
+    desc: '缘知随心庭，探索技术、哲学与生活智慧的深度博客。聚焦技术开发、自动化、高效工具与被动收入构建等内容；同时，记录对哲学智慧、思维模型与认知升级的持续探索。以有涯随无涯，缘知而行，沉心以笔。在信息洪流中，尝试锚定理性与好奇，追寻技术与人文交汇的真谛。所有思考沉淀于此，愿与您共鸣。',
+    keywords: '技术博客, 音乐推荐, 思维探索, 自部署, 自动化, 作品集, 音乐鉴赏分享, BlueOS 开发, Tailwind CSS, 编程开发, 哲学智慧, 开源工具, 睡后收入构建',
+    path: '/images/HorizontalScroll/fine.niceshare.site.png',
+    buttonText: '查看详情 >',
+    externalLink: 'https://fine.niceshare.site/',
+    createdDate: '2025-02-26',
+    authorUrl: 'https://github.com/nicejade'
   },
   {
     title: '静轩之别苑',
