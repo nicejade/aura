@@ -6,7 +6,7 @@
     </div>
 
     <div id="scroll-trigger" role="list"
-      class="w-full bg-white images desktop:h-[100vh] flex desktop:flex-row flex-col overflow-hidden flex-nowrap overscroll-none tablet:mt-[16px] laptop:mt-[32px]"
+      class="w-full bg-white images desktop:h-[100vh] flex desktop:flex-row flex-col overflow-hidden flex-nowrap tablet:mt-[16px] laptop:mt-[32px]"
       itemscope itemtype="https://schema.org/ItemList">
       <meta itemprop="@type" content="ItemList" />
       <meta itemprop="itemListOrder" content="Ascending" />
@@ -142,11 +142,16 @@ export default {
     return {
       isMobileFlag: isSmallerScreen(),
       currentUrlPath: location.href,
-      blogsList: Object.freeze(BLOGS_LIST)
+      blogsList: Object.freeze(BLOGS_LIST),
+      scrollTween: null,
+      resizeHandlerRegistered: false
     }
   },
 
   created() {
+  },
+
+  mounted() {
     this.$nextTick(() => {
       if (isSmallerScreen()) return
 
@@ -154,23 +159,60 @@ export default {
     })
   },
 
-  methods: {
-    addDynamicAnimate() {
-      const scrollWidth = document.querySelector('#scroll-trigger').scrollWidth
-      const offset = scrollWidth - document.documentElement.clientWidth
-      const panels = gsap.utils.toArray('#scroll-trigger .panel')
+  beforeDestroy() {
+    this.cleanupScrollTrigger()
+  },
 
-      gsap.to(panels, {
+  methods: {
+    handleResize() {
+      ScrollTrigger.refresh()
+    },
+
+    addDynamicAnimate() {
+      const panelContainer = document.querySelector('#scroll-trigger')
+      if (!panelContainer) return
+
+      const panels = gsap.utils.toArray('#scroll-trigger .panel')
+      if (!panels.length) return
+
+      // 计算真实需要的横向滚动距离：缩短为 2 倍视口高度，加快滚动进程
+      const getScrollDistance = () => window.innerHeight * 2
+
+      this.scrollTween = gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: 'none',
         scrollTrigger: {
-          trigger: '#scroll-trigger',
+          trigger: panelContainer,
           pin: true,
-          scrub: 1,
+          scrub: 0.1,
           markers: false,
-          end: `+=${offset}`
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          end: () => `+=${getScrollDistance()}`
         }
       })
+
+      if (!this.resizeHandlerRegistered) {
+        window.addEventListener('resize', this.handleResize)
+        this.resizeHandlerRegistered = true
+      }
+
+      ScrollTrigger.refresh()
+    },
+
+    cleanupScrollTrigger() {
+      if (this.scrollTween) {
+        if (this.scrollTween.scrollTrigger) {
+          this.scrollTween.scrollTrigger.kill()
+        }
+        this.scrollTween.kill()
+        this.scrollTween = null
+      }
+
+      if (this.resizeHandlerRegistered) {
+        window.removeEventListener('resize', this.handleResize)
+        this.resizeHandlerRegistered = false
+      }
     }
   }
 }
