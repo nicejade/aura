@@ -3,6 +3,7 @@
     <Banner />
     <Wechats />
     <ScrollReveal />
+    <LifeSpent />
     <ScrollZoom />
     <HorizontalScroll />
     <Elevator />
@@ -17,6 +18,7 @@ import ScrollReveal from '../components/ScrollReveal.vue'
 import ScrollZoom from './../components/ScrollZoom.vue'
 import Wechats from '../components/Wechats.vue'
 import HorizontalScroll from '../components/HorizontalScroll.vue'
+import LifeSpent from '../components/LifeSpent.vue'
 import Footer from './../components/Footer.vue'
 import Elevator from './../components/Elevator.vue'
 
@@ -33,6 +35,7 @@ export default {
     ScrollZoom,
     Wechats,
     HorizontalScroll,
+    LifeSpent,
     Footer,
     Elevator
   },
