@@ -4,6 +4,7 @@
     <Wechats />
     <ScrollReveal />
     <LifeSpent />
+    <GPTWordbook />
     <ScrollZoom />
     <HorizontalScroll />
     <Elevator />
@@ -21,6 +22,7 @@ import HorizontalScroll from '../components/HorizontalScroll.vue'
 import LifeSpent from '../components/LifeSpent.vue'
 import Footer from './../components/Footer.vue'
 import Elevator from './../components/Elevator.vue'
+import GPTWordbook from './../components/GPTWordbook.vue'
 
 export default {
   name: 'Home',
@@ -37,7 +39,8 @@ export default {
     HorizontalScroll,
     LifeSpent,
     Footer,
-    Elevator
+    Elevator,
+    GPTWordbook
   },
 
   mounted() {
