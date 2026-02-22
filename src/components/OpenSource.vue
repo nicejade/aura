@@ -1,0 +1,461 @@
+<template>
+  <section id="open-source" class="relative flex flex-col items-center w-full open-source-section bg-silverwhile"
+    aria-label="个人开源项目展示区">
+    <div class="module-warpper text-center module-space desktop:mb-[40px] tablet:mb-[20px]">
+      <h2 class="font-medium large-title vivo-blod-font">开源项目</h2>
+    </div>
+
+    <div class="desktop:h-[260vh] animate-containers w-full h-auto m-auto relative">
+      <div id="kt-animate-trigger" class="desktop:h-[160vh] items-center desktop:overflow-hidden flex flex-col">
+        <figure class="img tablet:px-[16px] laptop:px-[32px] mt-[-8px]"></figure>
+        <ul
+          class="list w-full mx-auto flex flex-row items-start justify-between flex-wrap desktop:max-w-[1200px] laptop:px-[32px] tablet:px-[16px]">
+          <li v-for="(project, idx) in openSourceProjects" :key="idx"
+            class="item card-item tablet:w-full laptop:w-[49%] desktop:w-[31%] desktop:mb-[50px] laptop:mb-[32px] tablet:mb-[16px]">
+            <a :href="project.url" target="_blank" rel="noopener noreferrer"
+              class="flex flex-col w-full h-full text-left no-underline group" :aria-label="'访问 ' + project.title">
+              <strong class="card-title block text-[20px] font-medium">{{ project.title }}</strong>
+              <p
+                class="card-desc ellipsis-text pt-[14px] text-[15px] leading-[26px] tablet:text-[14px] tablet:leading-[24px]">
+                {{ project.desc }}
+              </p>
+              <div v-if="project.tags && project.tags.length" class="flex flex-wrap gap-[6px] pt-[14px]">
+                <span v-for="(tag, i) in project.tags" :key="i" class="tag-chip">
+                  {{ tag }}
+                </span>
+              </div>
+              <span class="card-link mt-auto pt-[16px]">{{ project.linkText }} →</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+import { gsap, ScrollTrigger } from 'gsap/all'
+import { isSmallerScreen } from '../helper/utils'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const openSourceProjects = [
+  {
+    title: 'FDC · Fine Directory Curator',
+    desc: 'Rust 构建的文件分类整理工具，按年份与类型对源目录一级项归类，支持预览、不覆盖策略，适用于 macOS 与 Linux。',
+    url: 'https://fine.niceshare.site/projects/fine-directory-curator/',
+    linkText: '查看项目',
+    tags: ['Rust', 'CLI', 'macOS', 'Linux']
+  },
+  {
+    title: 'Aura | Build your digital aura',
+    desc: 'A beautifully crafted, animation-rich personal homepage template. Designed to help you present your projects, blogs, and digital identity — with elegance.',
+    url: 'https://github.com/nicejade/aura',
+    linkText: 'GitHub',
+    tags: ['Vue', 'TailwindCSS', 'GSAP']
+  },
+  {
+    title: 'Homepage',
+    desc: '基于 Astro、Starlight、Svelte、Markdown、MDX、TailwindCSS、TypeScript 构建的个人主页，快速、易用、易于访问、高度可定制。',
+    url: 'https://github.com/nicejade/homepage',
+    linkText: 'GitHub',
+    tags: ['Astro', 'Starlight', 'Svelte', 'TailwindCSS']
+  },
+  {
+    title: 'Arya Jarvis',
+    desc: '为开发人员设计的命令行工具，支持复制路径、生成密码、Prettier 美化、本地静态服务、Markdown 预览、端口查看、二维码生成等。',
+    url: 'https://github.com/nicejade/arya-jarvis',
+    linkText: 'GitHub',
+    tags: ['Node.js', 'CLI', 'Prettier']
+  },
+  {
+    title: 'Arya Jarvis Doc',
+    desc: 'Arya Jarvis 使用文档，旨在为开发人员节省更多时间和精力，涵盖路径复制、密码生成、代码美化、本地服务、Markdown 预览等实用功能说明。',
+    url: 'https://github.com/nicejade/arya-jarvis-doc',
+    linkText: 'GitHub',
+    tags: ['Docs', 'Docsify', 'Frontend']
+  },
+  {
+    title: 'Nice Front-End Tutorial',
+    desc: '与时俱进版前端资源、教程与见解，涵盖大前端、框架、构建工具、测试、Node、Docker 等分类，持续维护与更新。',
+    url: 'https://github.com/nicejade/nice-front-end-tutorial/',
+    linkText: 'GitHub',
+    tags: ['Vue', 'React', 'Tutorial', 'Resources']
+  }
+]
+
+export default {
+  name: 'OpenSource',
+
+  data() {
+    return {
+      openSourceProjects: Object.freeze(openSourceProjects)
+    }
+  },
+
+  created() {
+    this.$nextTick(() => {
+      if (isSmallerScreen()) return
+      this.addDynamicAnimate()
+    })
+  },
+
+  methods: {
+    addDynamicAnimate() {
+      const trigger = gsap.timeline({
+        scrollTrigger: {
+          toggleActions: 'restart none reverse none',
+          trigger: '#kt-animate-trigger',
+          start: 'top top',
+          end: 'top -150%',
+          pin: true,
+          duration: 12,
+          scrub: 0.2
+        }
+      })
+      trigger
+        .fromTo(
+          '#kt-animate-trigger .img',
+          { scale: 5, duration: 8 },
+          { scale: 1, duration: 8 }
+        )
+        .fromTo(
+          '#kt-animate-trigger .list .item',
+          { y: 50, autoAlpha: 0, stagger: 0.3 },
+          { y: 0, autoAlpha: 1, stagger: 1 }
+        )
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.open-source-section {
+  isolation: isolate;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(60px);
+  }
+
+  &::before {
+    top: 120px;
+    left: -130px;
+    width: 320px;
+    height: 320px;
+    background: rgba(56, 189, 248, 0.13);
+  }
+
+  &::after {
+    right: -100px;
+    bottom: 180px;
+    width: 260px;
+    height: 260px;
+    background: rgba(236, 72, 153, 0.1);
+  }
+}
+
+/* ─── Text ellipsis ─────────────────────────────────────────────────── */
+.ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 1439px) {
+  .ellipsis-text {
+    display: block;
+    overflow: visible;
+    text-overflow: initial;
+  }
+}
+
+/* ─── Project card ──────────────────────────────────────────────────── */
+.card-item {
+  position: relative;
+  overflow: hidden;
+  min-height: 228px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.06);
+  padding: 24px 20px;
+  cursor: pointer;
+  transition:
+    transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.28s ease,
+    border-color 0.2s ease,
+    background 0.28s ease;
+
+  /* Gradient top accent bar */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(90deg, #f59e0b, #ff4582, #0ea5e9);
+    opacity: 0;
+    transition: opacity 0.22s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.13), 0 8px 20px rgba(14, 165, 233, 0.08);
+    border-color: rgba(14, 165, 233, 0.24);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .card-title {
+      color: #0ea5e9;
+    }
+
+    .card-link {
+      letter-spacing: 0.02em;
+      transform: translateX(2px);
+    }
+
+    .card-desc {
+      color: #4b5563;
+    }
+  }
+
+  &:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(14, 165, 233, 0.35);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15), 0 14px 30px rgba(15, 23, 42, 0.1);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+/* laptop breakpoint: 768–1439px */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .card-item {
+    min-height: 236px;
+    padding: 28px 24px;
+  }
+}
+
+/* desktop breakpoint: 1440px+ */
+@media screen and (min-width: 1440px) {
+  .card-item {
+    min-height: 248px;
+    padding: 30px 26px;
+  }
+}
+
+/* ─── Card internals ─────────────────────────────────────────────────── */
+.card-title {
+  color: #1D1D1F;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+.card-desc {
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.tag-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.09);
+  color: #0284c7;
+  border: 1px solid rgba(14, 165, 233, 0.22);
+  transition: background 0.18s ease, border-color 0.18s ease;
+
+  .card-item:hover & {
+    background: rgba(14, 165, 233, 0.12);
+    border-color: rgba(14, 165, 233, 0.3);
+  }
+}
+
+.card-link {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0284c7;
+  letter-spacing: 0;
+  transition: letter-spacing 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+/* ─── Placeholder image ──────────────────────────────────────────────── */
+#kt-animate-trigger {
+  width: 100%;
+  overflow: hidden;
+
+  .img {
+    position: absolute;
+    left: 50%;
+    width: 770px;
+    height: 703px;
+    transform: translate(-50%, 0%) scale(1) translate3d(0px, 0px, 0px);
+    transform-origin: 50% 20%;
+    background-image:
+      radial-gradient(circle at 28% 32%, rgba(99, 102, 241, 0.5) 0%, transparent 52%),
+      radial-gradient(circle at 74% 70%, rgba(14, 165, 233, 0.45) 0%, transparent 52%),
+      linear-gradient(145deg, #0f172a 0%, #1e1b4b 100%);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+
+    /* Concentric ring decoration */
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      width: 280px;
+      height: 280px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow:
+        0 0 0 1px rgba(165, 180, 252, 0.22),
+        0 0 0 55px rgba(165, 180, 252, 0.05),
+        0 0 0 115px rgba(165, 180, 252, 0.035),
+        0 0 0 195px rgba(165, 180, 252, 0.02);
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  #kt-animate-trigger {
+    .img {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100vw;
+      height: 91.46667vw;
+      aspect-ratio: 1/1;
+      background-size: 100% 100%;
+      border-radius: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ─── Desktop responsive layout ─────────────────────────────────────── */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .animate-containers {
+    min-height: 2380px;
+  }
+
+  #kt-animate-trigger {
+    min-height: 900px;
+
+    .img {
+      width: 663px;
+      height: 606px;
+      background-size: 100% 100%;
+    }
+
+    .list {
+      margin: 540px 0 0 0;
+      padding-top: 0;
+      padding-bottom: 72px;
+      row-gap: 12px;
+
+      .item {
+        margin-bottom: 30px;
+
+        .card-title {
+          font-size: 18px;
+        }
+
+        .card-desc {
+          font-size: 13px;
+          padding-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1681px) {
+  .animate-containers {
+    min-height: 2680px;
+  }
+
+  #kt-animate-trigger {
+    .list {
+      margin: 680px 0 0 0;
+      padding-top: 0;
+      padding-bottom: 90px;
+
+      .item {
+        .card-title {
+          font-size: 22px;
+        }
+
+        .card-desc {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2560px) {
+  #kt-animate-trigger {
+    .list {
+      margin: 800px 0 0 0;
+      padding-top: 0;
+      padding-bottom: 90px;
+
+      .item {
+        .card-title {
+          font-size: 22px;
+        }
+
+        .card-desc {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .open-source-section {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .card-item {
+    min-height: auto;
+    border-radius: 18px;
+    padding: 22px 16px;
+  }
+}
+</style>

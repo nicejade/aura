@@ -1,6 +1,6 @@
 {
-  "name": "marshal-forge",
-  "description": "",
+  "name": "Aura",
+  "description": "A beautifully crafted, animation-rich personal homepage template. Designed to help you present your projects, blogs, and digital identity — with elegance.",
   "version": "0.1.0",
   "private": true,
   "scripts": {

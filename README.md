@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://word.lovejade.cn/" target="_blank">
+  <a href="https://www.lovejade.cn/" target="_blank">
     <img width="80"
     src="https://github.com/nicejade/aura/blob/main/public/favicon.svg?raw=true">
   </a>
