@@ -29,32 +29,6 @@
       <img id="scroll-zoom-img" class="block w-full" src="/images/ScrollZoom/nicelinks-tiny.png" alt="倾城之链移动端展示"
         loading="lazy" width="750" height="420" />
     </div>
-
-    <!-- 添加结构化数据 -->
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "倾城之链",
-        "description": "开放型新一代导航平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。",
-        "image": "/images/ScrollZoom/nicelinks.png",
-        "url": "https://site.lovejade.cn/",
-        "applicationCategory": "WebApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "CNY"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "ratingCount": "980",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
-      }
-    </script>
   </article>
 </template>
 
@@ -86,13 +60,44 @@ export default {
   },
 
   mounted() {
+    this.injectJsonLd()
     if (isSmallerScreen()) {
       const targetImgNode = document.querySelector('#scroll-zoom-img')
       if (targetImgNode) mediumZoom(targetImgNode)
     }
   },
 
+  beforeUnmount() {
+    const el = document.getElementById('scroll-zoom-jsonld')
+    if (el) el.remove()
+  },
+
   methods: {
+    injectJsonLd() {
+      const script = document.createElement('script')
+      script.id = 'scroll-zoom-jsonld'
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify({
+        '@context': 'http://schema.org',
+        '@type': 'SoftwareApplication',
+        name: '倾城之链',
+        description: '开放型新一代导航平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。',
+        image: '/images/ScrollZoom/nicelinks.png',
+        url: 'https://site.lovejade.cn/',
+        applicationCategory: 'WebApplication',
+        operatingSystem: 'All',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          ratingCount: '980',
+          bestRating: '5',
+          worstRating: '1'
+        }
+      })
+      document.head.appendChild(script)
+    },
+
     addDynamicAnimate() {
       this.trigger2scale()
       this.trigger2slide()

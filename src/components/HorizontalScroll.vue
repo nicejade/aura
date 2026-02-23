@@ -159,7 +159,7 @@ export default {
     })
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     this.cleanupScrollTrigger()
   },
 

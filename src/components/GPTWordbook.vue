@@ -81,32 +81,6 @@
         </div>
       </div>
     </div>
-
-    <!-- 添加结构化数据 -->
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "智析单词书",
-        "description": "AI 驱动的深度英语词汇学习平台，精选 11000+ 核心词汇，利用 GPT 模型深度解析每个单词的词义、发音、例句、词根、词缀、同义词、反义词、文化内涵与使用场景",
-        "image": "https://word.lovejade.cn/logo.png",
-        "url": "https://word.lovejade.cn/",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Web",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "CNY"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "ratingCount": "520",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
-      }
-    </script>
   </section>
 </template>
 
@@ -169,7 +143,42 @@ export default {
     })
   },
 
+  mounted() {
+    this.injectJsonLd()
+  },
+
+  beforeUnmount() {
+    const el = document.getElementById('gpt-wordbook-jsonld')
+    if (el) el.remove()
+  },
+
   methods: {
+    injectJsonLd() {
+      const script = document.createElement('script')
+      script.id = 'gpt-wordbook-jsonld'
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify({
+        '@context': 'http://schema.org',
+        '@type': 'SoftwareApplication',
+        name: '智析单词书',
+        description:
+          'AI 驱动的深度英语词汇学习平台，精选 11000+ 核心词汇，利用 GPT 模型深度解析每个单词的词义、发音、例句、词根、词缀、同义词、反义词、文化内涵与使用场景',
+        image: 'https://word.lovejade.cn/logo.png',
+        url: 'https://word.lovejade.cn/',
+        applicationCategory: 'EducationalApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          ratingCount: '520',
+          bestRating: '5',
+          worstRating: '1'
+        }
+      })
+      document.head.appendChild(script)
+    },
+
     addDynamicAnimate() {
       // 介绍卡片动画
       gsap.from('.intro-card', {

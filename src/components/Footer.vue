@@ -147,7 +147,7 @@ export default {
 
   methods: {
     onItemClick(e) {
-      const k = e.target.parentElement
+      let k = e.target.parentElement
       if (e.target.className === 'to-bottom') {
         k = k.parentElement
       }

@@ -14,7 +14,7 @@
 
 <br/><br/>
 
-  <img src="https://img.shields.io/badge/vue-2.6-4FC08D?logo=vuedotjs&logoColor=white" alt="Vue 2.6" />
+  <img src="https://img.shields.io/badge/vue-3.5-4FC08D?logo=vuedotjs&logoColor=white" alt="Vue 3.5" />
   <img src="https://img.shields.io/badge/tailwindcss-3.3-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 3.3" />
   <img src="https://img.shields.io/badge/gsap-3.12-88CE02?logo=greensock&logoColor=white" alt="GSAP 3.12" />
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" />
@@ -39,11 +39,11 @@
 
 | Layer | Technology |
 | --- | --- |
-| Framework | [Vue 2](https://v2.vuejs.org/) + [Vue Router](https://v3.router.vuejs.org/) |
+| Framework | [Vue 3](https://vuejs.org/) + [Vue Router 4](https://router.vuejs.org/) |
 | Styling | [Tailwind CSS 3](https://tailwindcss.com/) + SCSS |
 | Animation | [GSAP 3](https://gsap.com/) + ScrollTrigger |
-| Build | [Vue CLI 5](https://cli.vuejs.org/) |
-| Extras | [medium-zoom](https://github.com/francoischalifour/medium-zoom), [Element UI](https://element.eleme.io/) (Carousel), [floating-vue](https://floating-vue.starpad.dev/) |
+| Build | [Vite](https://vite.dev/) |
+| Extras | [medium-zoom](https://github.com/francoischalifour/medium-zoom) |
 
 ## Getting Started
 
@@ -61,12 +61,14 @@ cd aura
 
 # Install dependencies
 pnpm install
+# or: npm install
 
 # Start development server
 pnpm start
+# or: npm start
 ```
 
-The app will be available at `http://localhost:8080`.
+The app will be available at `http://localhost:5173`.
 
 ### Build for Production
 
@@ -80,10 +82,10 @@ Output will be generated in the `dist/` directory, ready for static hosting.
 
 ```
 aura/
+├── index.html           # HTML entry (Vite) with SEO meta tags
 ├── public/
 │   ├── images/          # Section images (banner, projects, blogs)
-│   ├── svgs/            # Social media & UI icons
-│   └── index.html       # HTML entry with SEO meta tags
+│   └── svgs/            # Social media & UI icons
 ├── src/
 │   ├── assets/
 │   │   ├── css/         # Global styles & Tailwind directives
@@ -116,7 +118,7 @@ Aura is designed as a starting point. Here's how to make it yours:
 
 ### 1. Branding
 
-- **Site title & meta** — Edit `public/index.html` to update the title, description, OG tags, and favicons.
+- **Site title & meta** — Edit `index.html` at project root to update the title, description, OG tags, and favicons.
 - **Banner** — Modify `src/components/Banner.vue` to change the hero headline, tagline, and CTA link.
 - **Colors** — Adjust the brand palette in `tailwind.config.js` under `selfCustomColors`.
 
@@ -149,7 +151,7 @@ Replace the static assets in `public/images/` with your own. Maintain the same d
 
 ### 5. Analytics
 
-Swap the Google Analytics ID in `public/index.html` with your own, or remove the script entirely.
+Swap the Google Analytics ID in `index.html` with your own, or remove the script entirely.
 
 ## Deployment
 
