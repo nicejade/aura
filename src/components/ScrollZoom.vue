@@ -1,14 +1,14 @@
 <template>
   <article id="scroll-zoom" class="w-full bg-white desktop:bg-silverwhile">
     <div class="module-warpper module-space">
-      <h3
+      <h2
         class="tablet:text-[20px] text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] mt-[24px] laptop:mt-[60px] desktop:mt-[0] text-[#1D1D1F]"
-        id="wealth-tracker">
+        id="nicelinks-title">
         <a class="gradient-text" href="https://site.lovejade.cn/" target="_blank" rel="noopener noreferrer"
           aria-label="访问倾城之链应用">
           倾城之链
         </a>
-      </h3>
+      </h2>
       <div class="general-desc py-[36px] tablet:py-[20px] text-left" v-html="contentHtmlStr" />
     </div>
 

@@ -52,7 +52,7 @@
 
     <div
       class="flex flex-row w-full !items-center module-warpper  tablet:mt-[30px] laptop:mt-[58px] desktop:mt-[160px] tablet:mb-[16px] laptop:mb-[34px] desktop:mb-[80px]">
-      <h2 class="font-medium large-title vivo-blod-font" id="open-source-works">开源作品</h2>
+      <h2 class="font-medium large-title vivo-blod-font" id="featured-projects-title">开源作品</h2>
     </div>
     <article
       class="card1 marquee-border w-full desktop:w-[1200px] mb-[16px] laptop:mb-[32px] desktop:mb-[60px] bg-white rounded-[20px] desktop:rounded-[30px] flex flex-col desktop:flex-row items-center"

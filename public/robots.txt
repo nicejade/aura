@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Improve snippet and preview quality for classic and AI-enhanced search results
+Max-image-preview: large
+Max-snippet: -1
+Max-video-preview: -1
+
+Sitemap: https://www.lovejade.cn/sitemap.xml

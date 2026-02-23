@@ -19,8 +19,7 @@
         class="lifespent-content w-full flex flex-col desktop:flex-row items-center justify-between desktop:p-[60px] p-[24px]">
         <div class="lifespent-text desktop:w-[45%] w-full flex flex-col items-start">
           <h3
-            class="tablet:text-[20px] text-[48px] tablet:leading-[32px] leading-[56px] vivo-blod-font font-medium mb-[20px] laptop:mb-[24px] desktop:mb-[32px] text-[#1D1D1F]"
-            id="lifespent-title">
+            class="tablet:text-[20px] text-[48px] tablet:leading-[32px] leading-[56px] vivo-blod-font font-medium mb-[20px] laptop:mb-[24px] desktop:mb-[32px] text-[#1D1D1F]">
             <a class="gradient-text" href="https://spent.lovejade.cn/" target="_blank" rel="noopener noreferrer"
               aria-label="访问 LeftSpent 应用">
               LeftSpent

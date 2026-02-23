@@ -1,5 +1,5 @@
 <template>
-  <section id="open-source"
+  <section
     class="relative flex flex-col items-start desktop:items-center w-full open-source-section bg-[#FAFBFC] desktop:bg-white tablet:px-[16px] laptop:px-[32px]"
     aria-label="个人开源项目展示区">
     <div class="module-warpper flex flex-row w-full items-center module-space desktop:mb-[40px] tablet:mb-[20px]">

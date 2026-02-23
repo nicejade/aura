@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <main class="page-container" role="main">
     <Banner />
     <Wechats />
     <ScrollReveal />
@@ -8,13 +8,13 @@
     <ScrollZoom />
     <OpenSource />
     <HorizontalScroll />
+    <FAQSection />
     <Elevator />
     <Footer />
-  </div>
+  </main>
 </template>
 
 <script>
-import { debounce } from './../helper/utils'
 import Banner from './../components/Banner.vue'
 import ScrollReveal from '../components/ScrollReveal.vue'
 import LifeSpent from '../components/LifeSpent.vue'
@@ -25,6 +25,7 @@ import HorizontalScroll from '../components/HorizontalScroll.vue'
 import Footer from './../components/Footer.vue'
 import Elevator from './../components/Elevator.vue'
 import GPTWordbook from './../components/GPTWordbook.vue'
+import FAQSection from './../components/FAQSection.vue'
 
 export default {
   name: 'Home',
@@ -43,35 +44,12 @@ export default {
     LifeSpent,
     Footer,
     Elevator,
-    GPTWordbook
-  },
-
-  mounted() {
-    this.handleScreenChanges()
+    GPTWordbook,
+    FAQSection
   },
 
   computed: {},
 
-  methods: {
-    handleScreenChanges() {
-      let width = window.innerWidth
-      let height = window.innerHeight
-      const REFRESH_THRESHOLD_W = 20
-      const REFRESH_THRESHOLD_H = 900
-
-      const reload = debounce(() => {
-        const newWidth = window.innerWidth
-        const newHeight = window.innerHeight
-
-        if (Math.abs(newWidth - width) > REFRESH_THRESHOLD_W || Math.abs(newHeight - height) > REFRESH_THRESHOLD_H) {
-          location.reload()
-        }
-        width = newWidth
-        height = newHeight
-      }, 500)
-
-      window.onresize = reload
-    }
-  }
+  methods: {}
 }
 </script>

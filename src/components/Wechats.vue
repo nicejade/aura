@@ -3,12 +3,12 @@
     role="region" aria-label="微信周边">
     <div
       class="flex flex-row w-full !items-center module-warpper tablet:mt-[20px] laptop:mt-[58px] desktop:mt-[160px] tablet:mb-[16px] laptop:mb-[34px] desktop:mb-[80px]">
-      <h2 class="font-medium large-title vivo-blod-font" id="open-source-works">微信周边</h2>
+      <h2 class="font-medium large-title vivo-blod-font">微信周边</h2>
     </div>
     <div
       class="w-full wechat-card desktop:w-[1200px] mb-[16px] laptop:mb-[32px] desktop:mb-[60px] bg-white rounded-[20px] desktop:rounded-[30px] flex flex-col-reverse desktop:flex-row items-center">
       <div
-        class="container flex flex-col gap-8 justify-center items-center px-4 mx-auto my-28 max-w-screen-lg sm:flex-row sm:gap-6 md:gap-8 lg:gap-20 xl:gap-28"
+        class="container flex flex-col items-center justify-center max-w-screen-lg gap-8 px-4 mx-auto my-28 sm:flex-row sm:gap-6 md:gap-8 lg:gap-20 xl:gap-28"
         aria-label="微信周边">
         <div
           class="blue-shadow aspect-square w-full max-w-[360px] bg-gray-50 rounded-2xl p-6 transition-shadow duration-300">
