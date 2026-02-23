@@ -1,11 +1,6 @@
 <template>
   <section class="lifespent-section w-full bg-white flex flex-col items-center tablet:px-[16px] laptop:px-[32px]"
-    role="region" aria-label="LeftSpent 生命时光" itemscope itemtype="http://schema.org/SoftwareApplication">
-    <meta itemprop="name" content="LeftSpent 生命时光" />
-    <meta itemprop="description" content="基于年龄、平均预期寿命和人口中位数年龄，展示您生命中已逝去的时间" />
-    <meta itemprop="applicationCategory" content="UtilityApplication" />
-    <meta itemprop="operatingSystem" content="Web" />
-    <meta itemprop="url" content="https://spent.lovejade.cn/" />
+    role="region" aria-label="LeftSpent 生命时光">
 
     <div
       class="flex flex-row w-full !items-center module-warpper tablet:mt-[20px] laptop:mt-[40px] desktop:mt-[80px] tablet:mb-[16px] laptop:mb-[34px] desktop:mb-[80px]">

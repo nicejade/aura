@@ -6,55 +6,15 @@
     </div>
 
     <div id="scroll-trigger" role="list"
-      class="w-full bg-white images desktop:h-[100vh] flex desktop:flex-row flex-col overflow-hidden flex-nowrap tablet:mt-[16px] laptop:mt-[32px]"
-      itemscope itemtype="https://schema.org/ItemList">
-      <meta itemprop="@type" content="ItemList" />
-      <meta itemprop="itemListOrder" content="Ascending" />
-      <meta itemprop="numberOfItems" :content="blogsList.length" />
-      <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
-        class="panel w-full desktop:h-[100vh]" v-for="(item, index) in blogsList" :key="index" role="listitem">
-        <meta itemprop="@type" content="ListItem" />
-        <meta itemprop="position" :content="index + 1" />
-        <div itemprop="item" itemscope itemtype="https://schema.org/Article">
-          <meta itemprop="@type" content="Article" />
-          <meta itemprop="headline" :content="item.title" />
-          <meta itemprop="abstract" :content="item.desc" />
-          <meta itemprop="description" :content="item.desc" />
-          <link itemprop="url" :href="item.externalLink" />
-          <meta itemprop="datePublished" :content="item.createdDate + 'T00:00:00+08:00'" />
-          <meta itemprop="dateModified" :content="item.createdDate + 'T00:00:00+08:00'" />
-          <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <meta itemprop="@type" content="Person" />
-            <meta itemprop="name" content="nicejade" />
-            <link itemprop="url" :href="item.authorUrl || 'https://github.com/nicejade'" />
-          </div>
-          <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-            <meta itemprop="@type" content="ImageObject" />
-            <link itemprop="url" :href="item.path" />
-            <meta itemprop="width" content="1200" />
-            <meta itemprop="height" content="630" />
-          </div>
-          <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-            <meta itemprop="@type" content="Organization" />
-            <meta itemprop="name" content="nicejade" />
-            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-              <meta itemprop="@type" content="ImageObject" />
-              <link itemprop="url" :href="item.path" />
-              <meta itemprop="width" content="1664" />
-              <meta itemprop="height" content="936" />
-            </div>
-          </div>
-          <meta itemprop="articleSection" content="Personal Blog" />
-          <meta itemprop="keywords" :content="item.keywords" />
-        </div>
+      class="w-full bg-white images desktop:h-[100vh] flex desktop:flex-row flex-col overflow-hidden flex-nowrap tablet:mt-[16px] laptop:mt-[32px]">
+      <div class="panel w-full desktop:h-[100vh]" v-for="(item, index) in blogsList" :key="index" role="listitem">
         <a class="outline-none desktop:cursor-auto" :href="isMobileFlag ? item.externalLink : 'javascript:void(0)'"
           target="_self" rel="noopener noreferrer" :aria-label="item.title">
           <div
             class="w-full desktop:h-[100vh] flex flex-col justify-center desktop:items-start items-center tablet:px-[16px] laptop:px-[32px]">
             <section class="section w-full desktop:aspect-[16/9] section-responsive">
               <h3
-                class="title desktop:text-[48px] laptop:text-[32px] tablet:text-[20px] font-bold desktop:mb-[60px] tablet:mb-[10px] laptop:mb-[20px] text-black"
-                itemprop="name">
+                class="title desktop:text-[48px] laptop:text-[32px] tablet:text-[20px] font-bold desktop:mb-[60px] tablet:mb-[10px] laptop:mb-[20px] text-black">
                 <a :href="item.externalLink" target="_blank" rel="noopener noreferrer" class="gradient-text"
                   :aria-label="`在新标签中打开 ${item.title}`">{{ item.title
                   }}</a>
@@ -64,8 +24,7 @@
                 <div
                   class="desktop:w-[400px] w-full desktop:h-full flex flex-col items-start justify-start desktop:pl-[10px]">
                   <div
-                    class="text-silver desktop:text-[20px] laptop:text-[20px] tablet:text-[14px] desktop:leading-10 laptop:leading-8 tablet:leading-[24px] font-normal text-left tablet:mb-[10px] laptop:mb-[20px]"
-                    itemprop="description">
+                    class="text-silver desktop:text-[20px] laptop:text-[20px] tablet:text-[14px] desktop:leading-10 laptop:leading-8 tablet:leading-[24px] font-normal text-left tablet:mb-[10px] laptop:mb-[20px]">
                     {{ item.desc }}
                   </div>
                   <a class="tablet:hidden laptop:hidden flex justify-center text-[16px] mt-[24px] items-center text-black hover:text-brand w-[128px] h-[48px] rounded-[24px] border border-silvergrey hover:border-brand outline-none"
@@ -75,8 +34,7 @@
                 </div>
                 <div class="desktop:max-w-[1280px] desktop:w-[60%] w-full desktop:h-full flex flex-col">
                   <img class="block w-full" :src="item.path" :alt="item.desc" loading="lazy"
-                    :srcset="`${item.path} 1x, ${item.path} 2x`" sizes="(min-width: 1440px) 60vw, 100vw"
-                    itemprop="image" />
+                    :srcset="`${item.path} 1x, ${item.path} 2x`" sizes="(min-width: 1440px) 60vw, 100vw" />
                 </div>
               </div>
             </section>

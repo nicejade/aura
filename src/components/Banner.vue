@@ -1,21 +1,21 @@
 <template>
-  <section class="banner-section" itemscope itemtype="http://schema.org/WebSite">
+  <section class="banner-section">
     <div
       class="bg-img w-full flex items-center justify-center min-h-[460px] laptop:min-h-[920px] desktop:min-h-[100vh] h-[460px] laptop:h-[920px] desktop:h-[100vh] bg-cover bg-center text-white flex-col text-start">
       <header
         class="tablet:mt-[52px] laptop:mt-[90px] tablet:mb-[12px] laptop:mb-[24px] desktop:mb-[30px] flex flex-col desktop:flex-row desktop:items-center">
-        <h1 itemprop="name"
+        <h1
           class="gradient-title font-extrabold whitespace-nowrap tablet:text-[30px] tablet:leading-[30px] laptop:text-[60px] laptop:leading-[76px] desktop:text-[88px] desktop:leading-[88px] desktop:font-bold">
           清风明月轩
         </h1>
       </header>
 
-      <div itemprop="description"
+      <div
         class="gradient-desc text-greywhile tablet:mb-[12px] laptop:mb-[39px] desktop:mb-[40px] laptop:text-[28px] desktop:text-[28px] tablet:text-[14px] tablet:leading-[24px] laptop:leading-[42px] desktop:leading-[40px]">
         收录精心打磨的轩帅作品与独立网站
       </div>
 
-      <a itemprop="url" class="homepage-link outline-none flex justify-center items-center tablet:w-[80px] tablet:h-[30px] laptop:w-[160px] laptop:h-[60px]
+      <a class="homepage-link outline-none flex justify-center items-center tablet:w-[80px] tablet:h-[30px] laptop:w-[160px] laptop:h-[60px]
             desktop:w-[176px] desktop:h-[52px] tablet:text-[12px] laptop:text-[24px] desktop:text-[20px] rounded-[30px]
             desktop:rounded-[26px] border border-white text-white bg-[rgba(255,255,255,0.20)]"
         href="https://www.niceshare.site/" target="_blank" rel="noopener" aria-label="访问个人主页">

@@ -1,54 +1,7 @@
 <template>
   <section
     class="section-container w-full bg-[#FAFBFC] desktop:bg-white flex flex-col items-start desktop:items-center tablet:px-[16px] laptop:px-[32px]"
-    aria-label="开源作品展示区" itemscope itemtype="http://schema.org/CollectionPage">
-    <meta itemprop="name" content="开源作品展示" />
-    <meta itemprop="description" content="展示包括生财有迹、玉桃文飨轩、在线编辑器等开源项目" />
-
-    <div itemscope itemtype="http://schema.org/SoftwareApplication">
-      <meta itemprop="name" content="生财有迹" />
-      <meta itemprop="applicationCategory" content="FinanceApplication" />
-      <meta itemprop="operatingSystem" content="Web" />
-      <meta itemprop="url" content="https://fund.lovejade.cn/" />
-      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-        <meta itemprop="price" content="0" />
-        <meta itemprop="priceCurrency" content="CNY" />
-      </div>
-      <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        <meta itemprop="ratingValue" content="4.9" />
-        <meta itemprop="ratingCount" content="636" />
-      </div>
-    </div>
-
-    <div itemscope itemtype="http://schema.org/SoftwareApplication">
-      <meta itemprop="name" content="玉桃文飨轩" />
-      <meta itemprop="applicationCategory" content="UtilityApplication" />
-      <meta itemprop="operatingSystem" content="Web" />
-      <meta itemprop="url" content="https://share.lovejade.cn/" />
-      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-        <meta itemprop="price" content="0" />
-        <meta itemprop="priceCurrency" content="CNY" />
-      </div>
-      <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        <meta itemprop="ratingValue" content="4.9" />
-        <meta itemprop="ratingCount" content="789" />
-      </div>
-    </div>
-
-    <div itemscope itemtype="http://schema.org/SoftwareApplication">
-      <meta itemprop="name" content="Arya Markdown 编辑器" />
-      <meta itemprop="applicationCategory" content="DeveloperApplication" />
-      <meta itemprop="operatingSystem" content="Web" />
-      <meta itemprop="url" content="https://markdown.lovejade.cn/" />
-      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-        <meta itemprop="price" content="0" />
-        <meta itemprop="priceCurrency" content="CNY" />
-      </div>
-      <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        <meta itemprop="ratingValue" content="4.9" />
-        <meta itemprop="ratingCount" content="978" />
-      </div>
-    </div>
+    aria-label="开源作品展示区">
 
     <div
       class="flex flex-row w-full !items-center module-warpper  tablet:mt-[30px] laptop:mt-[58px] desktop:mt-[160px] tablet:mb-[16px] laptop:mb-[34px] desktop:mb-[80px]">

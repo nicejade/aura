@@ -3,7 +3,7 @@
     <div class="module-warpper module-space">
       <h2
         class="tablet:text-[20px] text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] mt-[24px] laptop:mt-[60px] desktop:mt-[0] text-[#1D1D1F]"
-        id="nicelinks-title">
+        id="app-nicelinks">
         <a class="gradient-text" href="https://site.lovejade.cn/" target="_blank" rel="noopener noreferrer"
           aria-label="访问倾城之链应用">
           倾城之链
@@ -60,44 +60,13 @@ export default {
   },
 
   mounted() {
-    this.injectJsonLd()
     if (isSmallerScreen()) {
       const targetImgNode = document.querySelector('#scroll-zoom-img')
       if (targetImgNode) mediumZoom(targetImgNode)
     }
   },
 
-  beforeUnmount() {
-    const el = document.getElementById('scroll-zoom-jsonld')
-    if (el) el.remove()
-  },
-
   methods: {
-    injectJsonLd() {
-      const script = document.createElement('script')
-      script.id = 'scroll-zoom-jsonld'
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify({
-        '@context': 'http://schema.org',
-        '@type': 'SoftwareApplication',
-        name: '倾城之链',
-        description: '开放型新一代导航平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。',
-        image: '/images/ScrollZoom/nicelinks.png',
-        url: 'https://site.lovejade.cn/',
-        applicationCategory: 'WebApplication',
-        operatingSystem: 'All',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          ratingCount: '980',
-          bestRating: '5',
-          worstRating: '1'
-        }
-      })
-      document.head.appendChild(script)
-    },
-
     addDynamicAnimate() {
       this.trigger2scale()
       this.trigger2slide()

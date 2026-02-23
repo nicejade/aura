@@ -1,21 +1,18 @@
 <template>
-  <section class="w-full bg-white tablet:px-[16px] laptop:px-[32px]" role="region" aria-label="常见问题" itemscope
-    itemtype="https://schema.org/FAQPage">
+  <section class="w-full bg-white tablet:px-[16px] laptop:px-[32px]" role="region" aria-label="常见问题">
     <div
       class="flex flex-row w-full !items-center module-warpper tablet:mt-[20px] laptop:mt-[58px] desktop:mt-[120px] tablet:mb-[16px] laptop:mb-[34px] desktop:mb-[48px]">
-      <h2 class="font-medium large-title vivo-blod-font">常见问题</h2>
+      <h2 class="font-medium large-title vivo-blod-font" id="faq-section-title">常见问题</h2>
     </div>
 
     <div class="w-full desktop:w-[1200px] mx-auto desktop:mb-[120px] laptop:mb-[48px] tablet:mb-[24px]">
       <article v-for="(item, idx) in faqs" :key="idx"
-        class="faq-item mb-[12px] rounded-[16px] border border-[#EAECEF] bg-[#FAFBFC] p-[18px] laptop:p-[22px]"
-        itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        class="faq-item mb-[12px] rounded-[16px] border border-[#EAECEF] bg-[#FAFBFC] p-[18px] laptop:p-[22px]">
         <h3 class="text-[18px] leading-[28px] laptop:text-[20px] laptop:leading-[30px] font-medium text-[#1D1D1F]">
-          <span itemprop="name">{{ item.question }}</span>
+          <span>{{ item.question }}</span>
         </h3>
-        <div class="mt-[8px] text-[15px] leading-[26px] text-[#5F6368]" itemscope itemprop="acceptedAnswer"
-          itemtype="https://schema.org/Answer">
-          <p itemprop="text">{{ item.answer }}</p>
+        <div class="mt-[8px] text-[15px] leading-[26px] text-[#5F6368]">
+          <p>{{ item.answer }}</p>
         </div>
       </article>
     </div>
