@@ -1,6 +1,6 @@
 <template>
   <section
-    class="section-container w-full bg-gradient-to-br from-[#FAFBFC] to-[#F0F4FF] desktop:bg-white flex flex-col items-start desktop:items-center tablet:px-[16px] laptop:px-[32px]"
+    class="section-container w-full bg-[#FAFBFC] desktop:bg-white flex flex-col items-start desktop:items-center tablet:px-[16px] laptop:px-[32px]"
     aria-label="智析单词书展示区" itemscope itemtype="http://schema.org/SoftwareApplication">
     <meta itemprop="name" content="智析单词书" />
     <meta itemprop="description" content="AI 驱动的深度英语词汇学习平台，精选 11000+ 核心词汇" />
@@ -295,28 +295,34 @@ export default {
 
 <style scoped lang="scss">
 .intro-card {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    border-color: rgba(15, 23, 42, 0.12);
+    box-shadow: 0 24px 50px rgba(17, 24, 39, 0.12);
   }
 }
 
 .feature-tag {
   display: inline-block;
-  padding: 8px 16px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 6px 14px;
+  background: #f5f5f7;
+  color: #5f6368;
+  border-radius: 999px;
+  font-size: 13px;
   font-weight: 500;
   cursor: default;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.2s ease, color 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    background: #f0f0f2;
+    color: #3c4043;
+    box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08);
   }
 }
 
@@ -336,14 +342,14 @@ export default {
 .wordbook-icon {
   font-size: 100px;
   z-index: 2;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 6px 14px rgba(17, 24, 39, 0.14));
 }
 
 .wordbook-glow {
   position: absolute;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.1) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.12) 0%, rgba(15, 23, 42, 0.05) 70%, transparent 100%);
   border-radius: 50%;
   z-index: 1;
   animation: pulse 3s ease-in-out infinite;
@@ -400,7 +406,8 @@ export default {
   transition: transform 0.6s;
   transform-style: preserve-3d;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
 }
 
 .word-card-front,
@@ -418,13 +425,13 @@ export default {
 }
 
 .word-card-front {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #ffffff;
+  color: #1D1D1F;
 }
 
 .word-card-back {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  background: #f5f5f7;
+  color: #1D1D1F;
   transform: rotateY(180deg);
 }
 
@@ -441,7 +448,7 @@ export default {
 
 .word-phonetic {
   font-size: 16px;
-  opacity: 0.9;
+  opacity: 0.7;
   margin-bottom: 16px;
   font-family: 'Courier New', monospace;
 
@@ -453,7 +460,7 @@ export default {
 .word-meaning {
   font-size: 16px;
   line-height: 1.6;
-  opacity: 0.95;
+  color: #666666;
 
   @media screen and (min-width: 1440px) {
     font-size: 18px;
@@ -465,6 +472,7 @@ export default {
   font-weight: 700;
   margin-bottom: 20px;
   font-family: 'VIVO-FONT-WEB-BOLD', sans-serif;
+  color: #1D1D1F;
 
   @media screen and (min-width: 1440px) {
     font-size: 24px;
@@ -477,6 +485,7 @@ export default {
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 1.6;
+  color: #666666;
 
   @media screen and (min-width: 1440px) {
     font-size: 16px;
@@ -485,11 +494,11 @@ export default {
 
 .detail-label {
   font-weight: 600;
-  opacity: 0.9;
+  color: #1D1D1F;
 }
 
 .detail-value {
-  opacity: 0.85;
+  color: #666666;
 }
 
 // 移动端优化

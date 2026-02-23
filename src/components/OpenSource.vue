@@ -1,7 +1,8 @@
 <template>
-  <section id="open-source" class="relative flex flex-col items-center w-full open-source-section bg-silverwhile"
+  <section id="open-source"
+    class="relative flex flex-col items-start desktop:items-center w-full open-source-section bg-[#FAFBFC] desktop:bg-white tablet:px-[16px] laptop:px-[32px]"
     aria-label="个人开源项目展示区">
-    <div class="module-warpper text-center module-space desktop:mb-[40px] tablet:mb-[20px]">
+    <div class="module-warpper flex flex-row w-full items-center module-space desktop:mb-[40px] tablet:mb-[20px]">
       <h2 class="font-medium large-title vivo-blod-font">开源项目</h2>
     </div>
 
@@ -132,31 +133,11 @@ export default {
 <style scoped lang="scss">
 .open-source-section {
   isolation: isolate;
+  background: #FAFBFC;
 
   &::before,
   &::after {
-    content: '';
-    position: absolute;
-    border-radius: 999px;
-    pointer-events: none;
-    z-index: -1;
-    filter: blur(60px);
-  }
-
-  &::before {
-    top: 120px;
-    left: -130px;
-    width: 320px;
-    height: 320px;
-    background: rgba(56, 189, 248, 0.13);
-  }
-
-  &::after {
-    right: -100px;
-    bottom: 180px;
-    width: 260px;
-    height: 260px;
-    background: rgba(236, 72, 153, 0.1);
+    display: none;
   }
 }
 
@@ -183,11 +164,11 @@ export default {
   position: relative;
   overflow: hidden;
   min-height: 228px;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 22px;
-  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.06);
-  padding: 24px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+  padding: 26px 22px;
   cursor: pointer;
   transition:
     transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -195,52 +176,29 @@ export default {
     border-color 0.2s ease,
     background 0.28s ease;
 
-  /* Gradient top accent bar */
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    border-radius: 20px 20px 0 0;
-    background: linear-gradient(90deg, #f59e0b, #ff4582, #0ea5e9);
-    opacity: 0;
-    transition: opacity 0.22s ease;
-  }
-
   &:hover {
     transform: translateY(-6px);
-    background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.13), 0 8px 20px rgba(14, 165, 233, 0.08);
-    border-color: rgba(14, 165, 233, 0.24);
-
-    &::before {
-      opacity: 1;
-    }
+    background: #ffffff;
+    box-shadow: 0 24px 50px rgba(17, 24, 39, 0.12);
+    border-color: rgba(15, 23, 42, 0.12);
 
     .card-title {
-      color: #0ea5e9;
+      color: #1D1D1F;
     }
 
     .card-link {
-      letter-spacing: 0.02em;
-      transform: translateX(2px);
+      color: #1D1D1F;
     }
 
     .card-desc {
-      color: #4b5563;
+      color: #666666;
     }
   }
 
   &:focus-within {
     transform: translateY(-4px);
-    border-color: rgba(14, 165, 233, 0.35);
-    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15), 0 14px 30px rgba(15, 23, 42, 0.1);
-
-    &::before {
-      opacity: 1;
-    }
+    border-color: rgba(15, 23, 42, 0.16);
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08), 0 18px 40px rgba(17, 24, 39, 0.1);
   }
 }
 
@@ -249,6 +207,7 @@ export default {
   .card-item {
     min-height: 236px;
     padding: 28px 24px;
+    border-radius: 20px;
   }
 }
 
@@ -256,7 +215,8 @@ export default {
 @media screen and (min-width: 1440px) {
   .card-item {
     min-height: 248px;
-    padding: 30px 26px;
+    padding: 32px 28px;
+    border-radius: 30px;
   }
 }
 
@@ -270,7 +230,7 @@ export default {
 }
 
 .card-desc {
-  color: #6b7280;
+  color: #86868B;
   transition: color 0.2s ease;
 }
 
@@ -281,14 +241,15 @@ export default {
   font-weight: 500;
   letter-spacing: 0.02em;
   border-radius: 999px;
-  background: rgba(14, 165, 233, 0.09);
-  color: #0284c7;
-  border: 1px solid rgba(14, 165, 233, 0.22);
-  transition: background 0.18s ease, border-color 0.18s ease;
+  background: #f5f5f7;
+  color: #5f6368;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 
   .card-item:hover & {
-    background: rgba(14, 165, 233, 0.12);
-    border-color: rgba(14, 165, 233, 0.3);
+    background: #f0f0f2;
+    border-color: rgba(15, 23, 42, 0.12);
+    color: #3c4043;
   }
 }
 
@@ -296,9 +257,9 @@ export default {
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
-  color: #0284c7;
+  color: #1D1D1F;
   letter-spacing: 0;
-  transition: letter-spacing 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* ─── Placeholder image ──────────────────────────────────────────────── */
@@ -445,6 +406,7 @@ export default {
 
 @media screen and (max-width: 767px) {
   .open-source-section {
+    background: #FAFBFC;
 
     &::before,
     &::after {
@@ -454,8 +416,8 @@ export default {
 
   .card-item {
     min-height: auto;
-    border-radius: 18px;
-    padding: 22px 16px;
+    border-radius: 20px;
+    padding: 22px 18px;
   }
 }
 </style>
