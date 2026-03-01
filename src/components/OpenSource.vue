@@ -270,36 +270,14 @@ export default {
   .img {
     position: absolute;
     left: 50%;
-    width: 770px;
-    height: 703px;
+    width: 800px;
+    height: 800px;
     transform: translate(-50%, 0%) scale(1) translate3d(0px, 0px, 0px);
     transform-origin: 50% 20%;
-    background-image:
-      radial-gradient(circle at 28% 32%, rgba(99, 102, 241, 0.5) 0%, transparent 52%),
-      radial-gradient(circle at 74% 70%, rgba(14, 165, 233, 0.45) 0%, transparent 52%),
-      linear-gradient(145deg, #0f172a 0%, #1e1b4b 100%);
-    background-size: 100% 100%;
+    background-image: url('/images/OpenSource/mars.webp');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 24px;
-
-    /* Concentric ring decoration */
-    &::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 45%;
-      width: 280px;
-      height: 280px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      pointer-events: none;
-      box-shadow:
-        0 0 0 1px rgba(165, 180, 252, 0.22),
-        0 0 0 55px rgba(165, 180, 252, 0.05),
-        0 0 0 115px rgba(165, 180, 252, 0.035),
-        0 0 0 195px rgba(165, 180, 252, 0.02);
-    }
   }
 }
 
@@ -313,7 +291,7 @@ export default {
       width: 100vw;
       height: 91.46667vw;
       aspect-ratio: 1/1;
-      background-size: 100% 100%;
+      background-size: cover;
       border-radius: 0;
 
       &::after {
@@ -335,7 +313,7 @@ export default {
     .img {
       width: 663px;
       height: 606px;
-      background-size: 100% 100%;
+      background-size: cover;
     }
 
     .list {
