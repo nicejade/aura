@@ -311,13 +311,13 @@ export default {
     min-height: 900px;
 
     .img {
-      width: 663px;
-      height: 606px;
+      width: 600px;
+      height: 600px;
       background-size: cover;
     }
 
     .list {
-      margin: 540px 0 0 0;
+      margin: 620px 0 0 0;
       padding-top: 0;
       padding-bottom: 72px;
       row-gap: 12px;

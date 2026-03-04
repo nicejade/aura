@@ -9,10 +9,8 @@
 
   <title>清风明月轩 | 开源项目、技术博客与独立产品</title>
   <meta name="title" content="清风明月轩 | 开源项目、技术博客与独立产品">
-  <meta name="description"
-    content="清风明月轩收录高质量开源项目、技术博客与 AI 工具实践，涵盖前端工程化、自动化、独立开发与知识沉淀，帮助开发者高效发现可用资源与方法。">
-  <meta name="keywords"
-    content="清风明月轩, 开源项目, 技术博客, 前端工程化, Vue, AI 工具, 自动化, 独立开发, 个人作品集, Web 开发">
+  <meta name="description" content="清风明月轩收录高质量开源项目、技术博客与 AI 工具实践，涵盖前端工程化、自动化、独立开发与知识沉淀，帮助开发者高效发现可用资源与方法。">
+  <meta name="keywords" content="清风明月轩, 开源项目, 技术博客, 前端工程化, Vue, AI 工具, 自动化, 独立开发, 个人作品集, Web 开发">
   <link rel="canonical" href="https://www.lovejade.cn/">
   <link rel="alternate" hreflang="zh-CN" href="https://www.lovejade.cn/">
   <link rel="alternate" hreflang="x-default" href="https://www.lovejade.cn/">
@@ -28,8 +26,7 @@
   <meta property="og:url" content="https://www.lovejade.cn/">
   <meta property="og:site_name" content="清风明月轩">
   <meta property="og:title" content="清风明月轩 | 开源项目、技术博客与独立产品">
-  <meta property="og:description"
-    content="聚合开源项目、技术博客和 AI 应用实践，面向开发者的中文资源入口与个人数字作品站。">
+  <meta property="og:description" content="聚合开源项目、技术博客和 AI 应用实践，面向开发者的中文资源入口与个人数字作品站。">
   <meta property="og:image" content="https://www.lovejade.cn/mockup.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="676">
@@ -41,8 +38,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.lovejade.cn/">
   <meta name="twitter:title" content="清风明月轩 | 开源项目、技术博客与独立产品">
-  <meta name="twitter:description"
-    content="聚合开源项目、技术博客和 AI 应用实践，面向开发者的中文资源入口与个人数字作品站。">
+  <meta name="twitter:description" content="聚合开源项目、技术博客和 AI 应用实践，面向开发者的中文资源入口与个人数字作品站。">
   <meta name="twitter:image" content="https://www.lovejade.cn/mockup.png">
   <meta name="twitter:image:alt" content="清风明月轩首页预览">
 
@@ -505,6 +501,22 @@
       ]
     }
   </script>
+
+  <!-- Visually hidden: hide from layout/visual users, keep in accessibility tree -->
+  <style>
+    .visually-hidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
 </head>
 
 <body>
@@ -519,7 +531,7 @@
     </ul>
   </noscript>
   <div id="app">
-    <main aria-label="清风明月轩">
+    <main class="visually-hidden" aria-label="清风明月轩">
       <h1>清风明月轩</h1>
       <p>聚合开源项目、技术博客与 AI 应用实践，面向开发者的中文资源入口。</p>
     </main>

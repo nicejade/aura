@@ -7,7 +7,7 @@
 
     <div class="w-full desktop:w-[1200px] mx-auto desktop:mb-[120px] laptop:mb-[48px] tablet:mb-[24px]">
       <article v-for="(item, idx) in faqs" :key="idx"
-        class="faq-item mb-[12px] rounded-[16px] border border-[#EAECEF] bg-[#FAFBFC] p-[18px] laptop:p-[22px]">
+        class="faq-item mb-6 rounded-[16px] border border-[#EAECEF] bg-[#FAFBFC] p-[18px] laptop:p-[22px]">
         <h3 class="text-[18px] leading-[28px] laptop:text-[20px] laptop:leading-[30px] font-medium text-[#1D1D1F]">
           <span>{{ item.question }}</span>
         </h3>
