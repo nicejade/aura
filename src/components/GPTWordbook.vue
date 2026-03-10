@@ -18,7 +18,7 @@
             class="tablet:text-[20px] text-[48px] laptop:text-[58px] tablet:leading-[32px] leading-[58px] vivo-blod-font font-medium mb-[16px] laptop:mb-[20px] desktop:mb-[24px] text-[#1D1D1F]">
             <a class="gradient-text" href="https://word.lovejade.cn/" target="_blank" rel="noopener noreferrer"
               aria-label="访问智析单词书应用">
-              智析单词书
+              GPT Wordbook
             </a>
           </h3>
           <div

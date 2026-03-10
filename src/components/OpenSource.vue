@@ -8,7 +8,7 @@
 
     <div class="desktop:h-[260vh] animate-containers w-full h-auto m-auto relative">
       <div id="kt-animate-trigger" class="desktop:h-[160vh] items-center desktop:overflow-hidden flex flex-col">
-        <figure class="img tablet:px-[16px] laptop:px-[32px] mt-[-8px]"></figure>
+        <figure class="img tablet:px-[16px] laptop:px-[32px]"></figure>
         <ul
           class="list w-full mx-auto flex flex-row items-start justify-between flex-wrap desktop:max-w-[1200px] laptop:px-[32px] tablet:px-[16px]">
           <li v-for="(project, idx) in openSourceProjects" :key="idx"
@@ -275,7 +275,7 @@ export default {
     transform: translate(-50%, 0%) scale(1) translate3d(0px, 0px, 0px);
     transform-origin: 50% 20%;
     background-image: url('/images/OpenSource/mars.webp');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -288,10 +288,10 @@ export default {
       top: 0;
       left: 0;
       transform: none;
-      width: 100vw;
-      height: 91.46667vw;
+      width: calc(100vw - 36px);
+      height: calc(100vw - 36px);
       aspect-ratio: 1/1;
-      background-size: cover;
+      background-size: contain;
       border-radius: 0;
 
       &::after {
