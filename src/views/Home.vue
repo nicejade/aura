@@ -3,6 +3,7 @@
     <Banner />
     <Wechats />
     <ScrollReveal />
+    <NiceShare />
     <WisdomAtlas />
     <GPTWordbook />
     <LifeSpent />
@@ -25,6 +26,7 @@ import LifeSpent from '../components/LifeSpent.vue'
 import ScrollZoom from './../components/ScrollZoom.vue'
 import OpenSource from '../components/OpenSource.vue'
 import HorizontalScroll from '../components/HorizontalScroll.vue'
+import NiceShare from '../components/NiceShare.vue'
 import FAQSection from './../components/FAQSection.vue'
 import Elevator from './../components/Elevator.vue'
 import Footer from './../components/Footer.vue'
@@ -43,6 +45,7 @@ export default {
     Wechats,
     OpenSource,
     HorizontalScroll,
+    NiceShare,
     LifeSpent,
     Footer,
     Elevator,
