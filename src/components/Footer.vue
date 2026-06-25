@@ -91,6 +91,10 @@ const footerInfoArr = [
     title: '友情链接',
     branch: [
       {
+        title: '智能体漫游',
+        url: 'https://agent.jeffjade.com/'
+      },
+      {
         title: '逍遥自在轩',
         url: 'https://www.niceshare.site'
       },
