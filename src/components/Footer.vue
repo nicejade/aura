@@ -107,6 +107,10 @@ const footerInfoArr = [
         url: 'https://fine.niceshare.site/'
       },
       {
+        title: '逸趣游乐坊',
+        url: 'https://play.niceshare.site/'
+      },
+      {
         title: '玉桃文飨轩',
         url: 'https://share.lovejade.cn/'
       }
