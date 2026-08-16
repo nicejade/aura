@@ -84,7 +84,15 @@ const footerInfoArr = [
       {
         title: '曼妙句子',
         url: 'https://github.com/nicejade/read.lovejade.cn'
-      }
+      },
+      { 
+        title: '人生已过', 
+        url: 'https://github.com/nicejade/life-spent' 
+      },
+			{ 
+        title: '时空旅行', 
+        url: 'https://github.com/nicejade/spacetime-travel' 
+      },
     ]
   },
   {
@@ -134,6 +142,14 @@ const footerInfoArr = [
       {
         title: '在线服务',
         url: 'https://www.niceshare.site/#在线服务'
+      },
+      {
+        title: '终端工具',
+        url: 'https://www.niceshare.site/#终端工具'
+      },
+      {
+        title: '智能代理',
+        url: 'https://www.niceshare.site/#智能代理'
       }
     ]
   }
