@@ -9,6 +9,7 @@
     <GPTWordbook />
     <LifeSpent />
     <PlayArcade />
+    <BlueOSDocs />
     <ScrollZoom />
     <OpenSource />
     <HorizontalScroll />
@@ -26,6 +27,7 @@ import GPTWordbook from './../components/GPTWordbook.vue'
 import WisdomAtlas from '../components/WisdomAtlas.vue'
 import LifeSpent from '../components/LifeSpent.vue'
 import PlayArcade from '../components/PlayArcade.vue'
+import BlueOSDocs from '../components/BlueOSDocs.vue'
 import ScrollZoom from './../components/ScrollZoom.vue'
 import OpenSource from '../components/OpenSource.vue'
 import HorizontalScroll from '../components/HorizontalScroll.vue'
@@ -53,6 +55,7 @@ export default {
     AgentRoam,
     LifeSpent,
     PlayArcade,
+    BlueOSDocs,
     Footer,
     Elevator,
     GPTWordbook,
